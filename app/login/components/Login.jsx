@@ -179,41 +179,7 @@ export default class Login extends Component<Props> {
           <div className={Styles.container}>
             <div className={Styles['login_container']}>
               <Tabs>
-                <div label='Default' iconClass='fa-sign-in-alt'>
-                  <form className={Styles['login_form']} onSubmit={this.handleFormSubmit}>
-                    <h3 className={Styles['login-title']}>Sign in (username/password)</h3>
-                    <div className={Styles['form-group']}>
-                      <Input
-                        value={username}
-                        placeholder='Username'
-                        name="username"
-                        onChange={this.handleUsernameChange}
-                      />
-                    </div>
-                    <div className={Styles['form-group']}>
-                      <Input
-                        placeholder='Password'
-                        name="password"
-                        password
-                        onChange={this.handlePasswordChange}
-                        value={password}
-                      />
-                    </div>
-                    <Button label="Log in" disabled={!username || !password || isLoading}/>
-                    <div className={Styles['login_reset']}>
-                      <span>Fill in your Sauce Labs username and password.</span><br/>
-                      <span>Forgot your password? {' '}
-                        <a
-                          className={Styles.link}
-                          onClick={() => shell.openExternal('https://accounts.saucelabs.com/am/XUI/?#passwordReset/')}
-                        >
-                    Reset here
-                  </a>
-                  </span>
-                    </div>
-                  </form>
-                </div>
-                <div label='SSO' iconClass='fa-key'>
+              <div label='SSO' iconClass='fa-key'>
                   <form className={Styles['login_form']} onSubmit={this.handleFormSubmit}>
                     <h3 className={Styles['login-title']}>Sign in (SSO)</h3>
                     <div className={Styles['form-group']}>
@@ -253,6 +219,41 @@ export default class Login extends Component<Props> {
                     </div>
                   </form>
                 </div>
+                <div label='Default' iconClass='fa-sign-in-alt'>
+                  <form className={Styles['login_form']} onSubmit={this.handleFormSubmit}>
+                    <h3 className={Styles['login-title']}>Sign in (username/password)</h3>
+                    <div className={Styles['form-group']}>
+                      <Input
+                        value={username}
+                        placeholder='Username'
+                        name="username"
+                        onChange={this.handleUsernameChange}
+                      />
+                    </div>
+                    <div className={Styles['form-group']}>
+                      <Input
+                        placeholder='Password'
+                        name="password"
+                        password
+                        onChange={this.handlePasswordChange}
+                        value={password}
+                      />
+                    </div>
+                    <Button label="Log in" disabled={!username || !password || isLoading}/>
+                    <div className={Styles['login_reset']}>
+                      <span>Fill in your Sauce Labs username and password.</span><br/>
+                      <span>Forgot your password? {' '}
+                        <a
+                          className={Styles.link}
+                          onClick={() => shell.openExternal('https://accounts.saucelabs.com/am/XUI/?#passwordReset/')}
+                        >
+                    Reset here
+                  </a>
+                  </span>
+                    </div>
+                  </form>
+                </div>
+
               </Tabs>
             </div>
             <div className={Styles['right_container']}>
