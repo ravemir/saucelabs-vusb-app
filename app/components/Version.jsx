@@ -23,14 +23,6 @@ export default class VersionContainer extends Component {
             </span>
           </div>
         </div>
-        <Notification type={NOTIFICATIONS.INFO}>
-          Issues can be filed{' '}
-          <a
-            className={Styles.link}
-            onClick={()=> shell.openExternal('https://github.com/saucelabs/saucelabs-vusb-app/issues/')}>
-            here
-          </a>.
-        </Notification>
       </div>
     )
   }
