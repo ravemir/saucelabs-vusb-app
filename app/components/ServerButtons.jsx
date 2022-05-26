@@ -68,7 +68,7 @@ export default class ServerButtons extends Component<Props> {
                 serverStatus === VUSB_SERVER_STATUS.RUNNING
                   ? Styles.disabled
                   : ''
-              }  far fa-play-circle`}
+              }  start-server far fa-play-circle`}
               onClick={() => startVusbServer()}
             />
           )}
@@ -77,4 +77,10 @@ export default class ServerButtons extends Component<Props> {
       </div>
     );
   }
+
+  // unpretty hack to get the server to start by default when logging in
+  componentDidMount(){
+    document.getElementsByClassName('start-server')[0].click()
+  }
+
 }
