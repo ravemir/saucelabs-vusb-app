@@ -80,7 +80,10 @@ export default class ServerButtons extends Component<Props> {
 
   // unpretty hack to get the server to start by default when logging in
   componentDidMount(){
-    document.getElementsByClassName('start-server')[0].click()
+    const startButton = document.getElementsByClassName('start-server');
+    if (startButton.length>0) {
+      startButton[0].click();
+    } 
   }
 
 }
