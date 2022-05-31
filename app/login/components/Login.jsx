@@ -194,6 +194,7 @@ export default class Login extends Component<Props> {
                       <Input
                         placeholder='Access Key/Cookie'
                         name="cookie"
+                        password
                         onChange={this.handleCookieChange}
                         value={cookie}
                       />
